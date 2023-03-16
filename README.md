@@ -1,7 +1,8 @@
 # My config
-A repo containing my config files and a script required for getting neovim running. In order to install (as root):
+A repo containing my config files and a script required for getting neovim running. 
 ## Running setup
-```
+In order to install (as root):
+```bash
 # Install git
 apt update
 apt install git -y
