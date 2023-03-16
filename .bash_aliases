@@ -1,5 +1,5 @@
 #Add config command for git config repo
-alias config='/usr/bin/git --git-dir=/home/joo007/.cfg --work-tree=/home/joo007'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 # Get container id of existing container
 dgrep () {
     docker ps -a | grep "$1" | cut -d " " -f 1 
