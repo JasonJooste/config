@@ -9,7 +9,7 @@ apt install git -y
 # Clone this repo as a bare repo
 git clone --bare https://bitbucket.csiro.au/scm/~joo007/config.git $HOME/.cfg
 # Checkout files with home as the working tree directory
-git --git-dir="$HOME/.cfg" --work-tree="$HOME" checkout -f -f
+git --git-dir="$HOME/.cfg" --work-tree="$HOME" checkout -f
 # Add the aliases and functions in .bashrc and .bash_aliases
 . "$HOME/.bashrc"
 # Run the nvim setup (this could be extended to many files here)
