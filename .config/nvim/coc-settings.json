@@ -1,0 +1,10 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"py",
+		"yaml",
+		"json"
+	],
+	"python.linting.flake8Enabled": true,
+	"python.formatting.provider": "black",
+	"python.pythonPath": "/usr/bin/local/python_redirect"
+}
