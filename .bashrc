@@ -126,6 +126,10 @@ fi
 # Switch to vi mode
 set -o vi
 
+# Set default editors
+export EDITOR=/usr/bin/nvim
+export VISUAL=$EDITOR
+
 # Some useful env vars
 export BUILD_SERVER=ras-b2-ph.nexus.csiro.au
 export PETRICHOR=petrichor.hpc.csiro.au
