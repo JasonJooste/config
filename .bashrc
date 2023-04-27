@@ -122,6 +122,11 @@ if [[ -n $DISPLAY ]]; then
   }
   bind -x '"\C-y": copy_line_to_x_clipboard' # binded to ctrl-y
 fi
+
+# Switch to vi mode
+set -o vi
+
+# Some useful env vars
 export BUILD_SERVER=ras-b2-ph.nexus.csiro.au
 export PETRICHOR=petrichor.hpc.csiro.au
 export BRACEWELL=bracewell.hpc.csiro.au
