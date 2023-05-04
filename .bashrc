@@ -127,7 +127,7 @@ fi
 set -o vi
 
 # Set default editors
-export EDITOR=/usr/bin/nvim
+export EDITOR=/snap/bin/nvim
 export VISUAL=$EDITOR
 
 # Some useful env vars
