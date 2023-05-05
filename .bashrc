@@ -130,6 +130,9 @@ set -o vi
 export EDITOR=/snap/bin/nvim
 export VISUAL=$EDITOR
 
+# Add CUDA to path
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+
 # Some useful env vars
 export BUILD_SERVER=ras-b2-ph.nexus.csiro.au
 export PETRICHOR=petrichor.hpc.csiro.au
