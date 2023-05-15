@@ -1,1 +1,1 @@
-sudo apt install -y xclip
+sudo apt install -y xclip tmux
