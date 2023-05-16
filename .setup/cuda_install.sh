@@ -13,3 +13,8 @@
 # sudo apt install cuda
 # # Add to path
 # echo "# Add CUDA to path\n"'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
+# # Add container toolkit
+# sudo apt-get install -y nvidia-container-toolkit
+# sudo nvidia-ctk runtime configure --runtime=docker
+# # Restart docker daemon
+# sudo systemctl restart docker
