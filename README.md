@@ -7,11 +7,15 @@ In order to install (as root):
 apt update
 apt install git -y
 # Clone this repo as a bare repo
-git clone --bare https://bitbucket.csiro.au/scm/~joo007/config.git $HOME/.cfg
+git clone --bare https://github.com/JasonJooste/config $HOME/.cfg
 # Checkout files with home as the working tree directory
 git --git-dir="$HOME/.cfg" --work-tree="$HOME" checkout -f
 # Add the aliases and functions in .bashrc and .bash_aliases
 . "$HOME/.bashrc"
+```
+
+Either run all of the setup scripts individually or all of them at once:
+```bash
 # Run the setup scripts
 find .setup -name '*.sh' -exec bash {} ';'
 ```
