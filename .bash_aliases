@@ -17,3 +17,14 @@ dbash () {
     docker exec -it $(dgrepf "$1") /bin/bash
 }
 
+# Add key binding for copying the current command to the clipboard
+if [[ -n $DISPLAY ]]; then
+  copy_line_to_x_clipboard () {
+    printf %s "$READLINE_LINE" | xclip -selection CLIPBOARD
+  }
+  bind -x '"\C-y": copy_line_to_x_clipboard' # bound to ctrl-y
+fi
+
+# Note: micromamba hasn't been added to install scripts
+alias mm="micromamba"
+alias cxclip="xclip -rmlastnl -selection C"

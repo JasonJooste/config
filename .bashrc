@@ -105,6 +105,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Local changes that can't be shared across machines (ubuntu is assumed for now)
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -115,26 +120,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# Add key binding for copying the current command to the clipboard
-if [[ -n $DISPLAY ]]; then
-  copy_line_to_x_clipboard () {
-    printf %s "$READLINE_LINE" | xclip -selection CLIPBOARD
-  }
-  bind -x '"\C-y": copy_line_to_x_clipboard' # binded to ctrl-y
-fi
 
 # Set default editors
 export EDITOR=/snap/bin/nvim
 export VISUAL=$EDITOR
 
+
+# NOTE: This has no install script yet
+export GOPATH=${HOME}/go
+export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+
 # Add CUDA to path
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-
-# Some useful env vars
-export BUILD_SERVER=ras-b2-ph.nexus.csiro.au
-export PETRICHOR=petrichor.hpc.csiro.au
-export BRACEWELL=bracewell.hpc.csiro.au
-export RUBY=ruby.hpc.csiro.au
-export BNE_RF_BOWEN=fs1-bne.nexus.csiro.au
-export CBR_RF_BOWEN=fs1-cbr.nexus.csiro.au
-export YOLOV3="/home/joo007/Documents/projects/object detection model/repos/yolov3-mlflow"
