@@ -11,6 +11,10 @@ Plug 'tpope/vim-fugitive'
 " Coc for npm plugins
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " jiangmiao/auto-pairs - could be interesting later for bracket pairs
+" For auto-generating python docstrings
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+" For nextflow syntax highlighting
+Plug 'lukegoodsell/nextflow-vim'
 call plug#end()	
 " Coc bindings
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
