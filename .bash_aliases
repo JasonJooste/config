@@ -26,7 +26,6 @@ if [[ -n $DISPLAY ]]; then
 fi
 
 # Note: micromamba hasn't been added to install scripts
-alias mm="micromamba"
 alias cxclip="xclip -rmlastnl -selection C"
 # Cmdline tool overrides
 alias ls=exa
