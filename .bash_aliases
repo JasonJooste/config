@@ -1,5 +1,9 @@
 #Add config command for git config repo
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+### Useful little functions
+calc() {
+    echo "scale=3;$@" | bc -l
+}
 # Get container id of existing container
 dgrep () {
     docker ps -a | grep "$1" | cut -d " " -f 1 
@@ -25,7 +29,6 @@ if [[ -n $DISPLAY ]]; then
   bind -x '"\C-y": copy_line_to_x_clipboard' # bound to ctrl-y
 fi
 
-# Note: micromamba hasn't been added to install scripts
 alias cxclip="xclip -rmlastnl -selection C"
 # Cmdline tool overrides
 alias ls=exa

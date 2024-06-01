@@ -63,6 +63,7 @@ else
 fi
 unset color_prompt force_color_prompt
 
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -132,3 +133,10 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 
 # Add CUDA to path
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+. "$HOME/.cargo/env"
+
+# Add failure exit codes to execution
+EC() {
+	echo -e '\e[1;33m'code $?'\e[m\n'
+}
+trap EC ERR
