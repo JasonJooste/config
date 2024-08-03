@@ -15,6 +15,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " For nextflow syntax highlighting
 Plug 'lukegoodsell/nextflow-vim'
+" For liquid syntax highlighting
+Plug 'tpope/vim-liquid'
 call plug#end()	
 " Coc bindings
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
