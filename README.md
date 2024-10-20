@@ -30,6 +30,9 @@ bash <(curl https://raw.githubusercontent.com/JasonJooste/config/main/.setup/.co
 ```
 This will download the install script and then run it to install the config. 
 
+## Adding automatic backup
+Just add the `.backup_run.bash` script to bash to make the backup run automatically (currently has bucket hardcoded into settings. Ideally, I'll set something up with local config later. 
+
 ## Using config manager
 The setup in this repo defines an alias `config` for a git repo in the `.cfg` directory with a working tree in the home directory and a `.gitignore` that ignores all files. To add a config file the add needs to be forced, e.g. `config add -f .bashrc`. All git commands are valid, just use `config` instead of `git`. 
 
