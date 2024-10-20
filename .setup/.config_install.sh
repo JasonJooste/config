@@ -20,7 +20,7 @@ apt install git -y
 # Remove existing dir - a little safer because we're arbitrarily executing shell scripts here
 rm -r "$HOME/.cfg"
 # Clone this repo as a bare repo
-git clone --bare https://github.com/JasonJooste/config "$HOME/.cfg"
+git clone --bare git@github.com:JasonJooste/config.git "$HOME/.cfg"
 # Checkout files with home as the working tree directory
 git --git-dir="$HOME/.cfg" --work-tree="$HOME" checkout -f
 # Add the aliases and functions in .bashrc and .bash_aliases
