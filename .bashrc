@@ -123,7 +123,7 @@ if ! shopt -oq posix; then
 fi
 
 # Set default editors
-export EDITOR=/snap/bin/nvim
+export EDITOR=/usr/bin/nvim
 export VISUAL=$EDITOR
 
 
