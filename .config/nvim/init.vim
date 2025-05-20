@@ -2,6 +2,8 @@
 filetype plugin on
 call plug#begin()
 " The default plugin directory is '~/.vim/plugged'
+" Leap
+Plug 'ggandor/leap.nvim'
 " Improve commenting
 Plug 'preservim/nerdcommenter'
 " Airline status bar for a bit more info
@@ -20,3 +22,6 @@ Plug 'tpope/vim-liquid'
 call plug#end()	
 " Coc bindings
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" Leap remapping of s S and gs
+lua require('leap').create_default_mappings()
+setlocal spell spelllang=en_au
