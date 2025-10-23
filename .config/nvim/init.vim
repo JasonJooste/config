@@ -24,4 +24,7 @@ call plug#end()
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " Leap remapping of s S and gs
 lua require('leap').create_default_mappings()
+" copy line to clipboard
+nnoremap <C-y> "+yy
+vnoremap <C-y> "+y
 autocmd FileType markdown,text setlocal spell spelllang=en_au
