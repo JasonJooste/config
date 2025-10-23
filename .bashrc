@@ -110,6 +110,11 @@ fi
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
+# Add project related variables. Depends on wd. New tmux panes start and add some
+# useful project-related env vars, aliases, etc
+if [ -f .bash_project ]; then
+    . .bash_project
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -133,10 +138,24 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 
 # Add CUDA to path
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 # Add failure exit codes to execution
 EC() {
 	echo -e '\e[1;33m'code $?'\e[m\n'
 }
 trap EC ERR
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+export BUNDLE_PATH="$HOME/.bundle"
+# Pyenv
+PATH="$HOME/.pyenv/bin:$PATH"
+# Minecraft
+# Maybe add toggle?
+gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false
+# Rust
+. "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
