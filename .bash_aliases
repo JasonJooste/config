@@ -30,8 +30,9 @@ if [[ -n $DISPLAY ]]; then
 fi
 
 alias cxclip="xclip -rmlastnl -selection C"
-# Cmdline tool overrides
-alias ls=exa
-alias cat=batcat
-alias grep=rg
-alias diff=delta
+# Blog
+alias bekyll='bundle exec jekyll'
+alias cp='cp -i'
+alias vactivate='. ./venv/bin/activate'
+alias prun='poetry run'
+alias pactivate='$(poetry env activate)'
