@@ -27,4 +27,7 @@ lua require('leap').create_default_mappings()
 " copy line to clipboard
 nnoremap <C-y> "+yy
 vnoremap <C-y> "+y
+" Remap jinja python templates to just have the python filetype
+autocmd BufNewFile,BufRead *.py.j2 set filetype=python
+" Set the spellchecker
 autocmd FileType markdown,text setlocal spell spelllang=en_au
